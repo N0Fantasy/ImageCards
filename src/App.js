@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+
+import { ImageCardList } from './ImageCardList/ImageCardList'
+
+import { useStore } from './store/store'
+
+export const GlobalContext = React.createContext()
 
 function App() {
+  const [state, dispatch] = useStore()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalContext.Provider value={{ state, dispatch }}>
+      <div className="App">
+        <ImageCardList />
+      </div>
+    </GlobalContext.Provider>
   );
 }
 
