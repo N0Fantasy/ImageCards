@@ -15,21 +15,18 @@
     margin-bottom: 10px;
 }
 
-.TagList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.Source {
     margin-bottom: 15px;
 }
 
-.Tag {
-    background-color: #fff;
-    margin: 3px;
-    padding: 5px 10px;
-    border-radius: 50px;
-    font-size: 15px;
-    line-height: 15px;
-    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.25);
+.SourceLink {
+    text-decoration: none;
+    color: #000000;
+    word-wrap:break-word;
+    transition: 0.2s;
+}
+.SourceLink:hover {
+    color: #ff6969;
 }
 
 .Btns {
@@ -38,7 +35,7 @@
     justify-content: flex-start;
 }
 
-.Like {
+.Unliked {
     margin-right: 5px;
     background-color: #fff;
     border: none;
@@ -51,15 +48,38 @@
     cursor: pointer;
     transition: 0.2s;
 }
-.Like::before {
+.Unliked::before {
     content: '\2661';
 }
-.Like:hover {
+.Unliked:hover {
     background-color: #dadada;
 }
-.Like:active {
-    content: '\2665';
+.Unliked:active {
+    background-color: #ff6363;
+}
+
+.Liked {
+    margin-right: 5px;
+    background-color: #fff;
     color: #ff0000;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    font-size: 20px;
+    line-height: 20px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.Liked::before {
+    content: '\2665';
+}
+.Liked:hover {
+    background-color: #ff6969;
+}
+.Liked:active {
+    background-color: #dadada;
 }
 
 .Delete {

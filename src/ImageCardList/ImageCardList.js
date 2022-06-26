@@ -1,17 +1,18 @@
 import React from 'react'
 
 import { ImageCard } from '../ImageCard/ImageCard'
-import { useImage } from '../api/useImage'
-
+import { useSelector } from 'react-redux'
 import './ImageCardList.css'
 
 export const ImageCardList = () => {
-    const data = useImage()
-    if (!data) return null
+    const images = useSelector(state => {
+        const { Reducer } = state
+        return Reducer.images
+    })
 
     return (
         <div className='ImageCardList'>
-                { data.map(image => <ImageCard key={image.image_id} image={image} /> ) }
+                { images.map(image => <ImageCard key={image.image_id} image={image} /> ) }
         </div>
     )
 }

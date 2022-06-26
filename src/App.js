@@ -1,22 +1,28 @@
 import React from 'react'
+import { ImageCardList } from './ImageCardList/ImageCardList'
+import { OnlyLikesBtn } from './OnlyLikesBtn/OnlyLikesBtn'
+
+import { useImages } from './api/useImage'
+import { useDispatch } from 'react-redux'
+import { addImg } from './redux/actionCreators'
 import './App.css'
 
-import { ImageCardList } from './ImageCardList/ImageCardList'
-
-import { useStore } from './store/store'
-
-export const GlobalContext = React.createContext()
-
 function App() {
-  const [state, dispatch] = useStore()
+  const data = useImages()
+  const dispatch = useDispatch(addImg)
+
+  if (!data)
+    return null
+
+  const upgradedData = data.map(image => ({ ...image, liked: false }))
+  dispatch(addImg(upgradedData))
 
   return (
-    <GlobalContext.Provider value={{ state, dispatch }}>
       <div className="App">
+        <OnlyLikesBtn />
         <ImageCardList />
       </div>
-    </GlobalContext.Provider>
-  );
+  )
 }
 
-export default App;
+export default App

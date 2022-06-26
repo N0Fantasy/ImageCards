@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 
-export const useImage = () => {
+export const useImages = () => {
     const [data, setData] = useState(null)
-    const url = "https://api.waifu.im/random/?is_nsfw=false&many=true"
+    const url = "https://api.waifu.im/random/?is_nsfw=true&many=true"
 
     useEffect(() => {
         fetch(url)

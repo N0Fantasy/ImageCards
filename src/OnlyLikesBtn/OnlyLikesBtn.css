@@ -1,0 +1,19 @@
+.OnlyLikes {
+    background-color: #fff;
+    border: none;
+    padding: 5px 10px;
+    width: fit-content;
+    height: 30px;
+    border-radius: 50px;
+    font-size: 15px;
+    line-height: 15px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.OnlyLikes:hover {
+    background-color: #dadada;
+}
+.OnlyLikes:active {
+    background-color: #b9b9b9;
+}
