@@ -11,9 +11,12 @@
     cursor: pointer;
     transition: 0.2s;
 }
-.OnlyLikes:hover {
-    background-color: #dadada;
-}
-.OnlyLikes:active {
-    background-color: #b9b9b9;
+
+@media screen and (min-device-width: 1200px) {
+    .OnlyLikes:hover {
+        background-color: #dadada;
+    }
+    .OnlyLikes:active {
+        background-color: #b9b9b9;
+    }
 }
