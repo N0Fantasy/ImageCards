@@ -7,10 +7,12 @@ export const Reducer = (state = initialState, action) => {
             const likedImage = state.images.filter(image => image.image_id === action.image_id)[0]
             const cloneImage = { ...likedImage }
             cloneImage.liked === false ? cloneImage.liked = true : cloneImage.liked = false
+            const modImages = state.images.map(image => image.image_id === action.image_id ? cloneImage : image)
+            const modResImages = state.reservedImages.map(image => image.image_id === action.image_id ? cloneImage : image)
             return {
                 ...state,
-                images: state.images.map(image => image.image_id === action.image_id ? cloneImage : image),
-                reservedImages: state.images.map(image => image.image_id === action.image_id ? cloneImage : image)
+                images: state.showLikedImgs ? modImages.filter(image => image.liked) : modImages,
+                reservedImages: modResImages
             }
         }
         case DELETE_IMG: {
