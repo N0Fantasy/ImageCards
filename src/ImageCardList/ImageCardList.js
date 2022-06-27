@@ -12,7 +12,7 @@ export const ImageCardList = () => {
 
     return (
         <div className='ImageCardList'>
-                { images.map(image => <ImageCard key={image.image_id} image={image} /> ) }
+                { images.map(image => <ImageCard key={image.id} image={image} /> ) }
         </div>
     )
 }

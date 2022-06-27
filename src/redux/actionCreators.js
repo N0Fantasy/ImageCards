@@ -1,16 +1,16 @@
 import { LIKE_CLICK, DELETE_IMG, ADD_IMG, SHOW_LIKED } from './actions'
 
-export const like = (image_id) => {
+export const like = (id) => {
     return {
         type: LIKE_CLICK,
-        image_id
+        id
     }
 }
 
-export const deleteImg = (image_id) => {
+export const deleteImg = (id) => {
     return {
         type: DELETE_IMG,
-        image_id
+        id
     }
 }
 

@@ -8,18 +8,18 @@ const ImageCardNoMemo = ({ image }) => {
     const dispatch = useDispatch()
 
     const handleOnLike = () => {
-        dispatch(like(image.image_id))
+        dispatch(like(image.id))
     }
     const handleOnDelete = () => {
-        dispatch(deleteImg(image.image_id))
+        dispatch(deleteImg(image.id))
     }
 
     return (
         <div className='ImageCard'>
-            <img className='Img' src={`${image.url}`} style={{height: image.height / image.width * 250 + 'px'}} alt='waifu' />
+            <img className='Img' src={`${image.url}`} style={{height: image.height / image.width * 250 + 'px'}} alt='cat' />
             <div className='Source'>
                 Source:
-                <a href={`${image.source}`} className='SourceLink'>{` ${image.source ? image.source : ''}`}</a>
+                <a href={`${image.url}`} className='SourceLink'>{` ${image.url}`}</a>
             </div>
             <div className='Btns'>
                 {
