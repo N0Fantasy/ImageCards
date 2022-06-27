@@ -25,9 +25,6 @@
     word-wrap:break-word;
     transition: 0.2s;
 }
-.SourceLink:hover {
-    color: #ff6969;
-}
 
 .Btns {
     display: flex;
@@ -51,9 +48,6 @@
 .Unliked::before {
     content: '\2661';
 }
-.Unliked:hover {
-    background-color: #dadada;
-}
 
 .Liked {
     margin-right: 5px;
@@ -72,9 +66,6 @@
 .Liked::before {
     content: '\2665';
 }
-.Liked:hover {
-    background-color: #ff6969;
-}
 
 .Delete {
     background-color: #fff;
@@ -92,6 +83,18 @@
 .Delete::before {
     content: '\00D7';
 }
-.Delete:hover {
-    background-color: #ff6969;
+
+@media screen and (min-device-width: 1200px) {
+    .Unliked:hover {
+        background-color: #dadada;
+    }
+    .SourceLink:hover {
+        color: #ff6969;
+    }
+    .Liked:hover {
+        background-color: #ff6969;
+    }
+    .Delete:hover {
+        background-color: #ff6969;
+    }
 }
