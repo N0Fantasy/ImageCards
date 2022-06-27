@@ -16,7 +16,7 @@ const ImageCardNoMemo = ({ image }) => {
 
     return (
         <div className='ImageCard'>
-            <img className='Img' src={`${image.url}`} alt='waifu' />
+            <img className='Img' src={`${image.url}`} style={{height: image.height / image.width * 250 + 'px'}} alt='waifu' />
             <div className='Source'>
                 Source:
                 <a href={`${image.source}`} className='SourceLink'>{` ${image.source ? image.source : ''}`}</a>
