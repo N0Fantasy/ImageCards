@@ -17,10 +17,11 @@ export const Reducer = (state = initialState, action) => {
         }
         case DELETE_IMG: {
             const newImages = state.images.filter(image => image.id !== action.id)
+            const newResImages = state.reservedImages.filter(image => image.id !== action.id)
             return {
                 ...state,
                 images: newImages,
-                reservedImages: newImages
+                reservedImages: newResImages
             }
         }
         case ADD_IMG: {
