@@ -19,10 +19,8 @@ export const OnlyLikesBtn = () => {
         <>
             {
                 show
-                    ?
-                    <button onClick={handleOnShowLiked} className='OnlyLikes'>Show All</button>
-                    :
-                    <button onClick={handleOnShowLiked} className='OnlyLikes'>Only Liked</button>
+                    ? <button onClick={handleOnShowLiked} className='OnlyLikes'>Show All</button>
+                    : <button onClick={handleOnShowLiked} className='OnlyLikes'>Only Liked</button>
             }
         </>
     )

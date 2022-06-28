@@ -24,10 +24,8 @@ const ImageCardNoMemo = ({ image }) => {
             <div className='Btns'>
                 {
                     image.liked
-                        ?
-                        <button onClick={handleOnLike} className='Liked'>♥</button>
-                        :
-                        <button onClick={handleOnLike} className='Unliked'>♡</button>
+                        ? <button onClick={handleOnLike} className='Liked'>♥</button>
+                        : <button onClick={handleOnLike} className='Unliked'>♡</button>
                 }
                 <button onClick={handleOnDelete} className='Delete'>Delete ✕</button>
             </div>
