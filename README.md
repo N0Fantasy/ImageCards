@@ -7,7 +7,7 @@ Image information received from [thecatapi.com](https://thecatapi.com/)
 
 ```
 git clone https://github.com/N0Fantasy/ImageScroller.git
-cd ImageScroller
+cd ImageCards
 ```
 installing dependencies `npm install` or `yarn install`  
 then `npm start` or `yarn start`
