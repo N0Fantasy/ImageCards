@@ -6,7 +6,7 @@ Image information received from [thecatapi.com](https://thecatapi.com/)
 ## Getting started on win PC
 
 ```
-git clone https://github.com/N0Fantasy/ImageScroller.git
+git clone https://github.com/N0Fantasy/ImageCards.git
 cd ImageCards
 ```
 installing dependencies `npm install` or `yarn install`  
