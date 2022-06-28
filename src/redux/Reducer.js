@@ -1,7 +1,7 @@
 import { initialState } from "./initialState"
 import { LIKE_CLICK, DELETE_IMG, ADD_IMG, SHOW_LIKED } from "./actions"
 
-export const reducer = (state = initialState, action) => {
+export const Reducer = (state = initialState, action) => {
     switch (action.type) {
         case LIKE_CLICK: {
             const likedImage = state.images.filter(image => image.id === action.id)[0]
