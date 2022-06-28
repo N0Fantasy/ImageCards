@@ -14,10 +14,10 @@ export const deleteImg = (id) => {
     }
 }
 
-export const addImg = (imgs) => {
+export const addImg = (images) => {
     return {
         type: ADD_IMG,
-        imgs
+        images
     }
 }
 
