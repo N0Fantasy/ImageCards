@@ -1,8 +1,8 @@
 import React from 'react'
-import { ImageCardList } from './ImageCardList/ImageCardList'
-import { OnlyLikesBtn } from './OnlyLikesBtn/OnlyLikesBtn'
+import { ImageCardList } from './components/ImageCardList/ImageCardList'
+import { OnlyLikesBtn } from './components/OnlyLikesBtn/OnlyLikesBtn'
 
-import { useImages } from './api/useImage'
+import { useImages } from './hooks/useImages'
 import { useDispatch } from 'react-redux'
 import { addImg } from './redux/actionCreators'
 import './App.css'

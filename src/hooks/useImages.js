@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { API_KEY } from './settings'
+import { API_KEY } from '../env'
 
 export const useImages = () => {
     const [data, setData] = useState(null)

@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 
-import { like, deleteImg } from '../redux/actionCreators'
+import { like, deleteImg } from '../../redux/actionCreators'
 import { useDispatch } from 'react-redux'
 import './ImageCard.css'
 
