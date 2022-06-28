@@ -7,8 +7,8 @@ import './OnlyLikesBtn.css'
 export const OnlyLikesBtn = () => {
     const dispatch = useDispatch()
     const show = useSelector(state => {
-        const { reducer } = state
-        return reducer.showLikedImgs
+        const { Reducer } = state
+        return Reducer.showLikedImgs
     })
 
     const handleOnShowLiked = () => {

@@ -6,8 +6,8 @@ import './ImageCardList.css'
 
 export const ImageCardList = () => {
     const images = useSelector(state => {
-        const { reducer } = state
-        return reducer.images
+        const { Reducer } = state
+        return Reducer.images
     })
 
     return (
