@@ -19,10 +19,9 @@ function App() {
 
   return (
     <div className="App">
-      <OnlyLikesBtn />
       {
         data
-          ? <ImageCardList />
+          ? <><OnlyLikesBtn /><ImageCardList /></>
           : <Loader />
       }
     </div>
