@@ -6,3 +6,14 @@ body {
   margin-top: 15px;
   text-align: center;
 }
+
+.LoaderContainer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.Loader {
+  width: 20vw;
+  height: 20vw;
+  margin-top: 100px;
+}
